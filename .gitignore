@@ -10,6 +10,9 @@ servicio_Imagenes/Lib/site-packages
 # MAC Os 
 .DS_Store
 
+# VIRTUAL ENVIROMENT
+virtual_enviroment/
+
 # Distribution / packaging
 .Python
 build/
