@@ -13,5 +13,8 @@ Flask server that exposes two endpoints.
   - <code> flask run </code>  
 
 ## Resize endpoint
+Endpoint to resize an image to 299 x 299 px.
+  - @input : Image
+  - @output : Resized image with padding 😈
 
 ## Rescale endpoint
