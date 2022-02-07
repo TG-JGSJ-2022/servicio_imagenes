@@ -2,7 +2,7 @@ from crypt import methods
 import cv2
 from flask import Flask, make_response, redirect, request, flash
 import numpy as np
-import resize_image as ri
+import Utils.resize_image as ri
 
 app = Flask(__name__)
 
@@ -40,5 +40,8 @@ def resize_image():
     return response
 # Eod
 
+"""---------------------------
+           Run app
+---------------------------"""
 app.run(debug=True,
         port = 5000)
