@@ -39,9 +39,3 @@ def resize_image():
     response.content_type = "image/png"
     return response
 # Eod
-
-"""---------------------------
-           Run app
----------------------------"""
-app.run(debug=True,
-        port = 5000)
