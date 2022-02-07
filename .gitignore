@@ -5,8 +5,7 @@ __pycache__/
 
 # C extensions
 *.so
-servicio_Imagenes/Lib/site-packages
-
+servicio_venv/
 # MAC Os 
 .DS_Store
 
