@@ -1,4 +1,4 @@
-# import cv2
+import cv2
 from flask import Flask, make_response, redirect, request, flash
 import numpy as np
 import Utils.resize_image as ri
