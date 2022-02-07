@@ -1,5 +1,4 @@
-from crypt import methods
-import cv2
+from cv2 import *
 from flask import Flask, make_response, redirect, request, flash
 import numpy as np
 import Utils.resize_image as ri
