@@ -1,5 +1,5 @@
 import cv2
-from flask import Flask, make_response, redirect, request, flash
+from flask import Flask, make_response, redirect, render_template, request, flash
 import numpy as np
 import Utils.resize_image as ri
 
@@ -13,9 +13,19 @@ def index():
     return "hola mundo"
 # Eod
 
-@app.route("/resize", methods=["POST"])
+@app.route("/resize", methods=["POST", "GET"])
 def resize_image():
 
+    # -------------------------
+    #       GET method
+    # -------------------------
+    if request.method == "GET":
+        return render_template("index.html")
+    # Eoi
+
+    # -------------------------
+    #      POST method
+    # -------------------------
     # Check if the image is in the request
     if "image" not in request.files:
         flash("File not found in request")
