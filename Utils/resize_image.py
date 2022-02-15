@@ -36,9 +36,6 @@ def image_resize_average_color(image, width = 299, height = 299, inter = cv2.INT
     # Eof
 
     average_color = list(map(lambda i : i / average, average_color))
-    # for i in range(0, 3): 
-    #     average_color[i] = average_color[i] / average
-    # # Eof
 
     #-------------------------------------------------
     #  Calculate padding to add to the resized image
@@ -49,9 +46,6 @@ def image_resize_average_color(image, width = 299, height = 299, inter = cv2.INT
     # Left and right border
     left = abs(ceil((299 - w) / 2)) if w < 299 else 0
     right = abs(floor((299 - w) / 2)) if w < 299 else 0
-
-    print(f"Heigth = {h} \nWidth = {w}\n")    
-    print(f"Top = [{top}] Bottom = [{bottom}] Left =[{left}] Rigth = [{right}]")
 
     image_with_padding = cv2.copyMakeBorder(resized, top, bottom, left, right, cv2.BORDER_CONSTANT, value=average_color)
     
@@ -78,7 +72,6 @@ def image_resize_dominant_color(image, width = 299, height = 299, inter = cv2.IN
 
     # Calculate dominant color of the image
     data = np.reshape(resized, (-1,3))
-    # print(data.shape)
     data = np.float32(data)
 
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
