@@ -107,18 +107,20 @@ def image_resize_dominant_color(image, width = 299, height = 299, inter = cv2.IN
     return image_with_padding
 # Eod
 
+# ------------------------------------
 # TEST 
+# ------------------------------------
+
 # Read the image using imread function
+# image = cv2.imread('./image.jpg')
+# print("Original image shape : ", image.shape)
 
-image = cv2.imread('./image.jpg')
-print("Original image shape : ", image.shape)
+# resized_image_average = image_resize_average_color(image, 299, 299)
+# print("Resized image shape (AVERAGE) : ", resized_image_average.shape)
 
-resized_image_average = image_resize_average_color(image, 299, 299)
-print("Resized image shape (AVERAGE) : ", resized_image_average.shape)
+# resized_image_dominant = image_resize_average_color(image, 299, 299)
+# print("Resized image shape (DOMINANT) : ", resized_image_dominant.shape)
 
-resized_image_dominant = image_resize_average_color(image, 299, 299)
-print("Resized image shape (DOMINANT) : ", resized_image_dominant.shape)
-
-cv2.imshow("AVERAGE", resized_image_average)
-cv2.imshow("DOMINANT", resized_image_dominant)
-cv2.waitKey()
+# cv2.imshow("AVERAGE", resized_image_average)
+# cv2.imshow("DOMINANT", resized_image_dominant)
+# cv2.waitKey()
