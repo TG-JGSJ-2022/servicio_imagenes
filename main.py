@@ -40,7 +40,8 @@ def resize_image():
     image = cv2.imdecode(image_array, cv2.IMREAD_COLOR)
 
     # Process image
-    resized_image = ri.image_resize(image)
+    # resized_image = ri.image_resize_dominant_color(image)
+    resized_image = ri.image_resize_average_color(image)
 
     # Return resized image
     _, buffer = cv2.imencode(".png", resized_image)
